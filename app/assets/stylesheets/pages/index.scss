@@ -1,0 +1,27 @@
+#content {
+  .gradient-x-overlay-image::before {
+    z-index: 2;
+    background-image: linear-gradient(to right, rgba($color: $blue, $alpha: .78) 0, rgba($color: $blue, $alpha: .78) 100%);
+  }
+  
+  .image-bg-content {
+    position: absolute;
+    top: 0;
+    background-size: cover;
+    left: 0;
+    width: 100%;
+    height: 630px;
+  }
+
+  #register {
+    max-width: 718px;
+    margin: 0 auto;
+  }
+
+  .swiper-slide {
+    img {
+      opacity: .7;
+    }
+  }
+}
+

@@ -3,10 +3,20 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+import "../stylesheets/application"
+
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import Swiper from "../plugins/swiper/swiper-bundle.min"
+import HSMegaMenu from "../plugins/hs-mega-menu/hs-mega-menu.min"
+
+window.Swiper = Swiper
+window.HSMegaMenu = HSMegaMenu
+
+import "../plugins/bootstrap/bootstrap.bundle.min"
+import "../pages/index"
 
 Rails.start()
 Turbolinks.start()
