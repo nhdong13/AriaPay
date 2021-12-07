@@ -1,21 +1,19 @@
-// This file is automatically compiled by Webpack, along with any other files
-// present in this directory. You're encouraged to place your actual application logic in
-// a relevant structure within app/javascript and only use these pack files to reference
-// that code so it'll be compiled.
-
 import "../stylesheets/application"
+import "bootstrap-icons/font/bootstrap-icons.css"
+import "bootstrap"
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import Swiper from "../plugins/swiper/swiper-bundle.min"
+import HSHeader from "../plugins/hs-header/hs-header.min"
 import HSMegaMenu from "../plugins/hs-mega-menu/hs-mega-menu.min"
 
 window.Swiper = Swiper
+window.HSHeader = HSHeader
 window.HSMegaMenu = HSMegaMenu
 
-import "../plugins/bootstrap/bootstrap.bundle.min"
 import "../pages/index"
 
 Rails.start()
