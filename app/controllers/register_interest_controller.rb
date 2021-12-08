@@ -2,8 +2,7 @@
 
 class RegisterInterestController < ApplicationController
   def create
-    register_interest = RegisterInterest.new(register_interest_params)
-    @status = register_interest.save
+    @register_interest = RegisterInterest.create(register_interest_params)
   end
 
   private

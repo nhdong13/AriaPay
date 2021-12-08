@@ -1,5 +1,5 @@
 var message;
-<% if @status %>
+<% if @register_interest.valid? %>
   message = `<p class="lead text-white fs-3 fw-bold mb-2 mt-10">Thank you for registering interest in AriaPay!</p>
              <p class="lead text-white fs-4 mb-4">A member of the AriaPay customer success team will be in touch shortly.</p>
             `
