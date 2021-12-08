@@ -14,5 +14,4 @@ class RegisterInterestController < ApplicationController
       :email
     )
   end
-
 end
