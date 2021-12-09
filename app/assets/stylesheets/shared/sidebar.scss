@@ -4,6 +4,17 @@
       color: $gray;
       font-size: 16px;
       font-weight: 600;
+
+      .nav-icon {
+        height: 20px;
+        line-height: 1;
+      }
+
+      &.active, &:hover {
+        svg {
+          fill: var(--blue);
+        }
+      }
     }
   }
 }

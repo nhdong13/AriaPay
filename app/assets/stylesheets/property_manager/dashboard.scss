@@ -20,3 +20,11 @@
     }
   }
 }
+
+.custom-select {
+  .select2-selection__rendered {
+    span {
+      font-weight: 600;
+    }
+  }
+}
