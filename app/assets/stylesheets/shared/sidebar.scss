@@ -7,3 +7,13 @@
     }
   }
 }
+
+.navbar-brand-wrapper {
+  justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar-brand-wrapper {
+    justify-content: space-between;
+  }
+}
