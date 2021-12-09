@@ -1,0 +1,19 @@
+main#content.main.pointer-event role="main" 
+  .content.container-fluid
+    .page-header
+      .row.align-items-center
+        .col-sm
+          h1.page-header-title Dashboard
+    = render "property_manager/dashboard/stats"
+    = render "property_manager/dashboard/table"
+
+javascript:
+  var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+  $('.js-chart').each(function () {
+    $.HSCore.components.HSChartJS.init($(this));
+  });
+
+  $('.js-select2-custom').each(function () {
+    var select2 = $.HSCore.components.HSSelect2.init($(this));
+  });

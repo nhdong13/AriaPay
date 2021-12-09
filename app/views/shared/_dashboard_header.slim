@@ -1,0 +1,16 @@
+header#header.navbar.navbar-expand-lg.navbar-fixed.navbar-height.navbar-flush.navbar-container.navbar-bordered
+  .navbar-nav-wrap
+    .navbar-brand-wrapper
+      a.navbar-brand href="#" 
+        = image_tag("logo.svg", class: "navbar-brand-logo", alt: "logo")
+    .navbar-nav-wrap-content-left
+      button.js-navbar-vertical-aside-toggle-invoker.close.mr-3 type="button" 
+        i.tio-first-page.navbar-vertical-aside-toggle-short-align data-original-title="Collapse" data-placement="right" data-toggle="tooltip" title="" 
+        i.tio-last-page.navbar-vertical-aside-toggle-full-align data-original-title="Expand" data-placement="right" data-template='<div class="tooltip d-none d-sm-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' data-toggle="tooltip" title="" 
+    .navbar-nav-wrap-content-right
+      ul.navbar-nav.align-items-center.flex-row
+        li.nav-item
+          .hs-unfold
+            a.nav-link.text-danger.font-weight-bold href="#"
+              i.tio-sign-out
+              | Log Out
