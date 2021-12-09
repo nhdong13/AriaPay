@@ -33,27 +33,106 @@
           th.sorting Due Date
           th.sorting
       tbody
-        - @outstanding_payments.each do |outstanding_payment|
-          tr
-            td
-              = outstanding_payment[:payee]
-            td
-              = outstanding_payment[:estate]
-            td
-              = outstanding_payment[:unit]
-            td
-              = outstanding_payment[:amount_due]
-            td
-              = outstanding_payment[:due_date]
-            td.font-weight-bolder
-              - if outstanding_payment[:is_reminder_sent]
-                span.text-success
-                  i.tio-checkmark-circle.mr-2
-                  | Reminder Sent
-              - else
-                span.text-primary
-                  i.tio-email.mr-2
-                  | Send Reminder
+        tr
+          td Brian Kenny
+          td Vesta Two-Three North
+          td Apartment No. 234
+          td €840.00
+          td 17 November 2021'
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Andrew McDonagh
+          td Marianella
+          td Apartment No. 123
+          td €1,300.00
+          td 17 November 2021'
+          td.font-weight-bolder
+            span.text-success
+              i.tio-checkmark-circle.mr-2
+              | Reminder Sent
+        tr
+          td Clark Wickstone
+          td WeLive
+          td Town House No. 001
+          td €1,700.00
+          td 17 November 2021'
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Brian Kenny
+          td Vesta Two-Three North
+          td Apartment No. 234
+          td €840.00
+          td 17 November 2021'
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Andrew McDonagh
+          td Marianella
+          td Apartment No. 123
+          td €1,300.00
+          td 17 November 2021'
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Clark Wickstone
+          td WeLive
+          td Town House No. 001
+          td €1,700.00
+          td 17 November 2021'
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Clark Wickstone
+          td WeLive
+          td Town House No. 001
+          td €1,700.00
+          td 17 November 2021'
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Brian Kenny
+          td Vesta Two-Three North
+          td Apartment No. 234
+          td €840.00
+          td 17 November 2021'
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Andrew McDonagh
+          td Marianella
+          td Apartment No. 123
+          td €1,300.00
+          td 17 November 2021'
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Clark Wickstone
+          td WeLive
+          td Town House No. 001
+          td €1,700.00
+          td 17 November 2021'
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
                   
   .card-footer
     .row.justify-content-center.justify-content-sm-between.align-items-sm-center
