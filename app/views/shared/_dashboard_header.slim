@@ -10,6 +10,6 @@ header#header.navbar.navbar-expand-lg.navbar-fixed.navbar-height.navbar-flush.na
       ul.navbar-nav.align-items-center.flex-row
         li.nav-item
           .hs-unfold
-            a.nav-link.text-danger.font-weight-bolder href="#"
+            = link_to destroy_user_session_path, method: :delete, class: "nav-link text-danger font-weight-bolder" do
               = image_tag("sign-out-alt-light.svg", class: "mr-2")
               | Log Out
