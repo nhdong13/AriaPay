@@ -3,7 +3,7 @@
 class ApplicationController < ActionController::Base
   layout :layout_by_resource
 
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for(_resource)
     property_manager_dashboard_path
   end
 

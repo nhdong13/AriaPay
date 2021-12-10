@@ -21,7 +21,7 @@ main#content.sign-in.flex-grow-1 role="main"
                 i.bi.bi-check-circle-fill
                 .ms-2.text-start 
                   h4.mt-2.text-white No more paperwork
-                  p.mb-0.text-white TGo digital, go green!
+                  p.mb-0.text-white Go digital, go green!
           .position-absolute.start-0.end-0.bottom-0.text-center.p-5
             .container.px-0.py-6
               .js-swiper-hero-clients.swiper-container.text-center
@@ -38,7 +38,7 @@ main#content.sign-in.flex-grow-1 role="main"
         .flex-grow-1.mx-auto style=("max-width: 28rem;")
           .text-center.mb-5.mb-md-7
             h1.h2 Log into your account
-            p Use the form below to log in to your account
+            p.text-muted Use the form below to log in to your account
           = form_for(resource, as: resource_name, url: user_session_path, html: { id: "user-sign-in", class: "js-validate needs-validation"}) do |f|
             .mb-4
               = f.label 'Email Address', class: "form-label"
