@@ -1,7 +1,6 @@
 window.indexInit = {
   init() {
     this.initSwiper(),
-    this.initHSHeader(),
     this.initHSMegaMenu()
   },
 
@@ -23,10 +22,6 @@ window.indexInit = {
         },
       },
     });
-  },
-
-  initHSHeader() {
-    new HSHeader('#header').init()
   },
 
   initHSMegaMenu() {
