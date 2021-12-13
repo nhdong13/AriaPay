@@ -2,51 +2,21 @@ main#content.sign-in.flex-grow-1 role="main"
   .container-fluid
     .row
       .col.d-none.d-lg-flex.justify-content-center.align-items-center.min-vh-lg-100.position-relative.gradient-x-overlay-image style=("background-image: url(#{image_path "house_1.png"});")
-        .p-5
-          figure.text-center.info
-            h1.text-white style=("font-size: 35px") Making service fees easy
-            p.text-white AriaPay is revolutionising service fee management for the property market
-            .list.my-10
-              .d-flex.text-white.my-7
-                i.bi.bi-check-circle-fill
-                .ms-2.text-start 
-                  h4.mt-2.text-white All in one tool
-                  p.mb-0.text-white Track and manage service charges
-              .d-flex.text-white.my-7
-                i.bi.bi-check-circle-fill
-                .ms-2.text-start 
-                  h4.mt-2.text-white Cenrtralised property management
-                  p.mb-0.text-white All your properties in one place
-              .d-flex.text-white.my-7
-                i.bi.bi-check-circle-fill
-                .ms-2.text-start 
-                  h4.mt-2.text-white No more paperwork
-                  p.mb-0.text-white Go digital, go green!
-          .position-absolute.start-0.end-0.bottom-0.text-center.p-5
-            .container.px-0.py-6
-              .js-swiper-hero-clients.swiper-container.text-center
-                .swiper-wrapper.justify-content-center.align-items-center
-                  .swiper-slide
-                    = image_tag('capital-dock.png', alt: "Logo", size: "122x45")
-                  .swiper-slide
-                    = image_tag('twinlite.png', alt: "Logo", size: "52x60")
-                  .swiper-slide
-                    = image_tag('cairn.png', alt: "Logo", size: "80x20")
-                  .swiper-slide
-                    = image_tag('vesta.png', alt: "Logo", size: "100x22")
+        = render "shared/marketing_block"
       .col.d-flex.justify-content-center.align-items-center.min-vh-lg-100
         .flex-grow-1.mx-auto style=("max-width: 28rem;")
           .text-center.mb-5.mb-md-7
             h1.h2 Log into your account
             p.text-muted Use the form below to log in to your account
           = form_for(resource, as: resource_name, url: user_session_path, html: { id: "user-sign-in", class: "js-validate needs-validation"}) do |f|
+            = render "shared/flash_message"
             .mb-4
               = f.label 'Email Address', class: "form-label"
               = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-lg"
             .mb-4
               .d-flex.justify-content-between.align-items-center
                 = f.label :password, class: "form-label"
-                a.form-label-link.text-muted href="#"  Forgot Password?
+                = link_to "Forgot Password?", new_user_password_path, class: "form-label-link text-muted"
               div data-hs-validation-validate-class="" 
                 = f.password_field :password, autocomplete: "current-password", class: "js-toggle-password form-control form-control-lg", data: {'hs-toggle-password-options': '{"target": "#changePassTarget", "defaultClass": "bi-eye-slash", "showClass": "bi-eye", "classChangeTarget": "#changePassIcon"}'}
             .d-grid.mb-3

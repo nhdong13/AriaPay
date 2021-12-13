@@ -1,0 +1,5 @@
+- flash.each do |key, value|
+  - if value.is_a?(String)
+    .alert.alert-dismissible.fade.show role="alert" class=flash_class(key)
+      = value
+      button.btn-close aria-label="Close" data-bs-dismiss="alert" type="button"

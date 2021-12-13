@@ -1,4 +1,13 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  FLASH_CLASSES = {
+    'notice' => 'alert-info',
+    'success' => 'alert-success',
+    'alert' => 'alert-danger'
+  }.freeze
+
+  def flash_class(level)
+    FLASH_CLASSES[level]
+  end
 end
