@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2021_12_10_013950) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_register_interests_on_email", unique: true
   end
 
   create_table "users", force: :cascade do |t|
