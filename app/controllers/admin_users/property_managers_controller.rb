@@ -5,6 +5,8 @@ module AdminUsers
     layout 'dashboard'
     before_action :authenticate_admin_user!
 
-    def index; end
+    def index
+      @property_managers = PropertyManager.all.page(params[:page])
+    end
   end
 end

@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   post 'register_interest', to: 'register_interest#create'
 
-  namespace :property_manager do
+  namespace :property_managers do
     get '/dashboard', to: 'dashboard#index'
   end
 end
