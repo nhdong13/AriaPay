@@ -1,3 +1,5 @@
+- sign_out_url = admin_user_signed_in? ? destroy_admin_user_session_path : destroy_user_session_path
+
 header#header.navbar.navbar-expand-lg.navbar-fixed.navbar-height.navbar-flush.navbar-container.navbar-bordered
   .navbar-nav-wrap
     .navbar-brand-wrapper
@@ -10,6 +12,6 @@ header#header.navbar.navbar-expand-lg.navbar-fixed.navbar-height.navbar-flush.na
       ul.navbar-nav.align-items-center.flex-row
         li.nav-item
           .hs-unfold
-            = link_to destroy_user_session_path, method: :delete, class: "nav-link text-danger font-weight-bolder" do
+            = link_to sign_out_url, method: :delete, class: "nav-link text-danger font-weight-bolder" do
               = image_tag("sign-out-alt-light.svg", class: "mr-2")
               | Log Out
