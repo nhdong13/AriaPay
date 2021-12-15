@@ -1,0 +1,30 @@
+.navbar-vertical-content {
+  .nav-item {
+    .nav-link {
+      color: $gray;
+      font-size: 16px;
+      font-weight: 600;
+
+      .nav-icon {
+        height: 20px;
+        line-height: 1;
+      }
+
+      &.active, &:hover {
+        svg {
+          fill: var(--blue);
+        }
+      }
+    }
+  }
+}
+
+.navbar-brand-wrapper {
+  justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar-brand-wrapper {
+    justify-content: space-between;
+  }
+}

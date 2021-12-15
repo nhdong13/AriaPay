@@ -1,0 +1,155 @@
+.card
+  .card-header
+    .row.justify-content-between.align-items-center.flex-grow-1
+      .col-sm-6.col-md-4.mb-3.mb-sm-0
+        h4
+          | Outstanding Payments
+          span.badge.badge-soft-warning.ml-2 10
+      .col-sm-6
+        .d-sm-flex.justify-content-sm-end.align-items-sm-center
+          .d-flex.justify-content-start.align-items-center.mr-5
+            span.mr-2 Sort by:
+            select#datatableEntries.js-select2-custom data-hs-select2-options='{
+                      "minimumResultsForSearch": "Infinity",
+                      "customClass": "custom-select custom-select-sm custom-select-borderless",
+                      "dropdownAutoWidth": true,
+                      "width": true
+                    }' 
+              option selected="selected" value="all"  All
+          form
+            .input-group.input-group-merge.input-group-flush
+              .input-group-prepend
+                .input-group-text
+                  i.tio-search
+              input#datatableSearch.form-control aria-label="Search" placeholder="Search" type="search" /
+  .table-responsive.datatable-custom
+    table#datatable.table.table-lg.table-borderless.table-thead-bordered.table-nowrap.table-align-middle.card-table.text-dark
+      thead.thead-light
+        tr
+          th.sorting Payee
+          th.sorting Estate
+          th.sorting Unit
+          th.sorting Amount Due
+          th.sorting Due Date
+          th
+      tbody
+        tr
+          td Brian Kenny
+          td Vesta Two-Three North
+          td Apartment No. 234
+          td €840.00
+          td 17 November 2021
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Andrew McDonagh
+          td Marianella
+          td Apartment No. 123
+          td €1,300.00
+          td 17 November 2021
+          td.font-weight-bolder
+            span.text-success
+              i.tio-checkmark-circle.mr-2
+              | Reminder Sent
+        tr
+          td Clark Wickstone
+          td WeLive
+          td Town House No. 001
+          td €1,700.00
+          td 17 November 2021
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Brian Kenny
+          td Vesta Two-Three North
+          td Apartment No. 234
+          td €840.00
+          td 17 November 2021
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Andrew McDonagh
+          td Marianella
+          td Apartment No. 123
+          td €1,300.00
+          td 17 November 2021
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Clark Wickstone
+          td WeLive
+          td Town House No. 001
+          td €1,700.00
+          td 17 November 2021
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Clark Wickstone
+          td WeLive
+          td Town House No. 001
+          td €1,700.00
+          td 17 November 2021
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Brian Kenny
+          td Vesta Two-Three North
+          td Apartment No. 234
+          td €840.00
+          td 17 November 2021
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Andrew McDonagh
+          td Marianella
+          td Apartment No. 123
+          td €1,300.00
+          td 17 November 2021
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+        tr
+          td Clark Wickstone
+          td WeLive
+          td Town House No. 001
+          td €1,700.00
+          td 17 November 2021
+          td.font-weight-bolder
+            span.text-primary
+              i.tio-email.mr-2
+              | Send Reminder
+                  
+  .card-footer
+    .row.justify-content-center.justify-content-sm-between.align-items-sm-center
+      .col-sm.mb-2.mb-sm-0
+        .d-flex.justify-content-center.justify-content-sm-start.align-items-center.font-weight-bold
+          span.mr-2 style=("font-size: 12px")  Showing:
+          span style=("color: #1E2022")  10 of 10
+      .col-sm-auto
+        .d-flex.justify-content-center.justify-content-sm-end
+          #datatable_paginate.dataTables_paginate.paging_simple_numbers
+            ul#datatable_pagination.pagination.datatable-custom-pagination
+              li.paginate_item.page-item.disabled
+                a#datatable_previous.paginate_button.previous.page-link aria-controls="datatable" data-dt-idx="0" tabindex="0" 
+                  span aria-hidden="true"  Prev
+              li.paginate_item.page-item.active
+                a.paginate_button.page-link aria-controls="datatable" data-dt-idx="1" tabindex="0"  1
+              li.paginate_item.page-item
+                a#datatable_next.paginate_button.next.page-link aria-controls="datatable" data-dt-idx="3" tabindex="0" 
+                  span aria-hidden="true"  Next
+
