@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
+    title AriaPay
+    meta content="width=device-width,initial-scale=1" name="viewport"
+    = csrf_meta_tags
+    = csp_meta_tag
+    link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" /
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'dashboard', 'data-turbolinks-track': 'reload'
+  body.footer-offset.footer-offset.has-navbar-vertical-aside.navbar-vertical-aside-show-xl
+    = render 'shared/dashboard_header'
+    = render 'shared/sidebar'
+    = yield
