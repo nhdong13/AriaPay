@@ -3,24 +3,24 @@
     .modal-content
       .modal-header.d-flex.align-items-start
         div
-          h4.modal-title Add Property Manager
+          h4.modal-title Invite Property Manager
           p Use the form below to invite a new property manager
         button.btn.btn-icon.btn-sm.btn-ghost-secondary aria-label="Close" data-dismiss="modal" type="button" 
           i.tio-clear.tio-lg
       .modal-body
-        form
+        = form_tag(invite_admin_users_property_managers_path, method: :post) do
           .form-group
-            label.col-form-label.input-label for=""  First name
-            input.js-toggle-password.form-control
+            label.col-form-label.input-label for="first_name"  First name
+            = text_field_tag :first_name, '', class: "form-control", id: "first_name"
           .form-group
-            label.col-form-label.input-label for=""  Last name
-            input.js-toggle-password.form-control
+            label.col-form-label.input-label for="last_name"  Last name
+            = text_field_tag :last_name, '', class: "form-control", id: "last_name"
           .form-group
-            label.col-form-label.input-label for=""  Email
-            input.js-toggle-password.form-control
+            label.col-form-label.input-label for="email"  Email
+            = text_field_tag :email, '', class: "form-control", id: "email"
           .form-group
-            label.col-form-label.input-label for=""  Company
-            input.js-toggle-password.form-control
+            label.col-form-label.input-label for="company_name"  Company
+            = text_field_tag :company_name, '', class: "form-control", id: "company_name"
           .d-flex.justify-content-end
             button.btn.btn-white.mr-2 aria-label="Close" data-dismiss="modal" type="button"  Cancel
             button.btn.btn-primary type="submit"  Invite

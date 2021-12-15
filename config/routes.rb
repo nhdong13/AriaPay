@@ -4,11 +4,18 @@ Rails.application.routes.draw do
   end
   
   devise_for :admin_users
-  devise_for :users
+  devise_for :users, controllers: {
+    invitations: "users/invitations"
+  }
+
   root 'pages#index'
 
   namespace :admin_users do
-    resources :property_managers, only: [:index]
+    resources :property_managers, only: [:index] do
+      collection do
+        post 'invite'
+      end
+    end
   end
 
   post 'register_interest', to: 'register_interest#create'

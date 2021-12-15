@@ -12,7 +12,21 @@ module AdminUsers
       @property_managers = @property_managers.includes(:user, :company).page(params[:page])
     end
 
+    def invite
+      if User.find_by(email: user_params[:email]).blank?
+        user = User.invite!(user_params)
+        company = Company.where(name: params[:company_name]).first_or_create
+        user.build_property_manager(company: company)
+        user.save
+      end
+      redirect_to admin_users_property_managers_path
+    end
+
     private
+
+    def user_params
+      params.permit(:first_name, :last_name, :email)
+    end
 
     def set_property_managers
       @property_managers = PropertyManager.all
@@ -24,6 +38,7 @@ module AdminUsers
 
     def sort_property_managers
       return unless params[:order_by].present?
+
       @property_managers = case params[:order_by].downcase
                            when 'name'
                              @property_managers.order_by_name

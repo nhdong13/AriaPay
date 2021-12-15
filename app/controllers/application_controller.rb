@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
       # first, sign out current_admin_user, if signed in
       sign_out current_admin_user if current_admin_user
 
-      property_manager_dashboard_path
+      property_managers_dashboard_path
     end
   end
 
