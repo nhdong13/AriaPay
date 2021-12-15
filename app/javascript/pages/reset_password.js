@@ -8,8 +8,7 @@ window.resetPasswordInit = {
       rules: {
         'user[password]': {
           required: true,
-          minlength: 8,
-          passwordConstraint: true
+          minlength: 8
         },
         'user[password_confirmation]': {
           equalTo: "#user_password"
