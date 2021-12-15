@@ -1,6 +1,6 @@
 import "../stylesheets/dashboard"
 import "bootstrap-icons/font/bootstrap-icons.css"
-import "bootstrap"
+import "../plugins/bootstrap-4.5.3/bootstrap.bundle.min.js"
 import "../plugins/chart.js/chart.js"
 import "../plugins/icon-set/style.css"
 import "../plugins/select2/select2.full.min.js"

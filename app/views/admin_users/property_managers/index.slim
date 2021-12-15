@@ -1,0 +1,27 @@
+main#content.main.pointer-event role="main" 
+  .content.container-fluid
+    .page-header.pb-4
+      .row.align-items-center
+        .col-sm
+          h1.page-header-title Property Managers
+        .col-sm-auto
+          a.btn.btn-primary data-toggle="modal" href="javascript:;" data-target="#inviteModal"
+            i.tio-user-add.mr-1
+            | Add Property Manager
+    = render "admin_users/property_managers/table"
+    = render "admin_users/property_managers/invite_modal"
+
+javascript:
+  var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+  $('.js-select2-custom').each(function () {
+    var select2 = $.HSCore.components.HSSelect2.init($(this));
+  });
+
+  $('.js-hs-unfold-invoker').each(function () {
+    var unfold = new HSUnfold($(this)).init();
+  });
+
+  $("#sort-by").on('change', function() {
+    this.form.submit()
+  })

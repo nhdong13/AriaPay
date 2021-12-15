@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   namespace :admin_users do
-    get '/property_managers', to: 'property_managers#index'
+    resources :property_managers, only: [:index]
   end
 
   post 'register_interest', to: 'register_interest#create'
