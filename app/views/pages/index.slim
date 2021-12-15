@@ -3,21 +3,23 @@ main#content role="main"
     .image-bg-content style=("background-image: url(#{image_path "house_1.png"});") 
     .position-relative.zi-2
       .d-md-flex
-        .container.d-md-flex.align-items-md-center.justify-content-center.text-center.content-space-3.content-space-t-md-4.content-space-t-lg-3 style=("height: 630px") 
-          .w-lg-75.mx-lg-auto
-            .mb-4
-              h1.display-4.text-white.mb-3 Change is coming!
-              p.lead.text-white.fs-4 AriaPay is revolutionising service charge management for the property market
-            = form_for @register_interest, url: register_interest_path, remote: true do |f|
-              p.lead.text-white.fs-5.fw-bold.mb-4.mt-8 Register interest today
-              .input-card.input-card-sm
-                .input-card-form
-                  = f.label :name, "Enter your name", class: "form-label visually-hidden"
-                  = f.text_field :name, class: "form-control form-control-lg", placeholder: "Your name", required: true
-                .input-card-form
-                  = f.label :email, "Enter email", class: "form-label visually-hidden"
-                  = f.email_field :email, class: "form-control form-control-lg", placeholder: "Your email", required: true
-                = f.submit "Register Interest", class: "btn btn-primary btn-lg"
+        .container.d-md-flex.align-items-md-center.justify-content-center.text-center.content-space-3.content-space-t-md-4
+          .row 
+            .col-12
+              .mx-lg-auto
+                .mb-4
+                  h1.display-4.text-white.mb-3 Change is coming!
+                  p.lead.text-white.fs-4 AriaPay is revolutionising service charge management for the property market
+                  = form_for @register_interest, url: register_interest_path, remote: true do |f|
+                    p.lead.text-white.fs-5.fw-bold.mb-4.mt-8 Register interest today
+                    .input-card.input-card-sm
+                      .input-card-form
+                        = f.label :name, "Enter your name", class: "form-label visually-hidden"
+                        = f.text_field :name, class: "form-control form-control-lg", placeholder: "Your name", required: true
+                      .input-card-form
+                        = f.label :email, "Enter email", class: "form-label visually-hidden"
+                        = f.email_field :email, class: "form-control form-control-lg", placeholder: "Your email", required: true
+                      = f.submit "Register Interest", class: "btn btn-primary btn-lg"
       .position-absolute.bottom-0.start-0.end-0
         .container.py-5
           .js-swiper-hero-clients.swiper-container.text-center
@@ -32,20 +34,26 @@ main#content role="main"
                 = image_tag('vesta.png', alt: "Logo", size: "100x22")
   .overflow-hidden
     .container.position-relative.content-space-2.content-space-t-lg-3.content-space-b-lg-0
-      .w-md-75.w-lg-50.text-center.mx-md-auto.mb-5
-        span.text-cap What is AriaPay?
-        h2 AriaPay takes the stress out of service charges collection
-      .w-md-75.text-center.mx-md-auto.mb-5.mb-md-9
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-      .container
-        = image_tag('house_2.png', style: "width: 100%; height: 324px; object-fit: cover;")
+      .row
+        .col-12
+          .w-md-75.w-lg-50.text-center.mx-md-auto.mb-5
+            span.text-cap What is AriaPay?
+            h2 AriaPay takes the stress out of service charges collection
+          .w-md-75.text-center.mx-md-auto.mb-5.mb-md-9
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+      .row
+        .col-12
+          .text-center.mx-md-auto.mb-5
+            = image_tag('house_2.jpg', class: 'img-fluid')
   .overflow-hidden
     .container.position-relative.content-space-2.content-space-t-lg-3.content-space-b-lg-0
-      .w-md-75.text-center.mx-md-auto.mb-5.mb-md-9
-        span.text-cap Our customers
-        h2 AriaPay allows for seamless payment and collection for tenants and property managers alike
-      .row
-        .col-sm-6.col-md-4.mb-3.mb-md-5
+      .row 
+        .col-12
+          .w-md-75.text-center.mx-md-auto.mb-5.mb-md-9
+            span.text-cap Our customers
+            h2 AriaPay allows for seamless payment and collection for tenants and property managers alike
+      .row.text-center
+        .col-sm-12.col-md-4.mb-3.mb-md-5
           .pe-lg-6
             span.svg-icon.text-primary.mb-3
               svg fill="none" height="24" viewbox=("0 0 27 31") width="24" xmlns="http://www.w3.org/2000/svg" 
@@ -53,7 +61,7 @@ main#content role="main"
                 path clip-rule="evenodd" d=("M24.96 28.88H26.16C26.5576 28.88 26.88 29.2023 26.88 29.6V30.8H0V29.6C0 29.2023 0.322355 28.88 0.72 28.88H1.92V1.51996C1.92 0.724666 2.56471 0.0799561 3.36 0.0799561H23.52C24.3153 0.0799561 24.96 0.724666 24.96 1.51996V28.88ZM8.4 3.91996C8.00235 3.91996 7.68 4.24231 7.68 4.63996V7.03996C7.68 7.4376 8.00235 7.75996 8.4 7.75996H10.8C11.1976 7.75996 11.52 7.4376 11.52 7.03996V4.63996C11.52 4.24231 11.1976 3.91996 10.8 3.91996H8.4ZM7.68 10.4C7.68 10.0023 8.00235 9.67996 8.4 9.67996H10.8C11.1976 9.67996 11.52 10.0023 11.52 10.4V12.8C11.52 13.1976 11.1976 13.52 10.8 13.52H8.4C8.00235 13.52 7.68 13.1976 7.68 12.8V10.4ZM8.4 19.28H10.8C11.1976 19.28 11.52 18.9576 11.52 18.56V16.16C11.52 15.7623 11.1976 15.44 10.8 15.44H8.4C8.00235 15.44 7.68 15.7623 7.68 16.16V18.56C7.68 18.9576 8.00235 19.28 8.4 19.28ZM15.36 28.88H11.52V23.84C11.52 23.4423 11.8424 23.12 12.24 23.12H14.64C15.0376 23.12 15.36 23.4423 15.36 23.84V28.88ZM18.48 19.28C18.8776 19.28 19.2 18.9576 19.2 18.56V16.16C19.2 15.7623 18.8776 15.44 18.48 15.44H16.08C15.6824 15.44 15.36 15.7623 15.36 16.16V18.56C15.36 18.9576 15.6824 19.28 16.08 19.28H18.48ZM19.2 12.8C19.2 13.1976 18.8776 13.52 18.48 13.52H16.08C15.6824 13.52 15.36 13.1976 15.36 12.8V10.4C15.36 10.0023 15.6824 9.67996 16.08 9.67996H18.48C18.8776 9.67996 19.2 10.0023 19.2 10.4V12.8ZM18.48 7.75996C18.8776 7.75996 19.2 7.4376 19.2 7.03996V4.63996C19.2 4.24231 18.8776 3.91996 18.48 3.91996H16.08C15.6824 3.91996 15.36 4.24231 15.36 4.63996V7.03996C15.36 7.4376 15.6824 7.75996 16.08 7.75996H18.48Z") fill="#387CFF" fill-rule="evenodd" opacity="0.402821" 
             h4 Property Managers
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la.
-        .col-sm-6.col-md-4.mb-3.mb-md-5
+        .col-sm-12.col-md-4.mb-3.mb-md-5
           .pe-lg-6
             span.svg-icon.text-primary.mb-3
               svg fill="none" height="24" viewbox=("0 0 35 31") width="24" xmlns="http://www.w3.org/2000/svg" 
@@ -61,7 +69,7 @@ main#content role="main"
                 path d=("M31.5963 16.7133L18.1593 4.8613C17.8049 4.54865 17.2732 4.54865 16.9188 4.8613L3.48186 16.7139C3.09672 17.0597 2.5042 17.028 2.1582 16.643L0.9031 15.249C0.557278 14.8639 0.589015 14.2713 0.974 13.9253L15.9743 0.682894C16.8635 -0.121023 18.217 -0.121023 19.1062 0.682894L25.0383 5.91952V2.89192C25.0383 2.37414 25.4581 1.9544 25.9759 1.9544H29.7259C30.2437 1.9544 30.6635 2.37414 30.6635 2.89192V10.886L34.1024 13.923C34.4875 14.2688 34.5195 14.8614 34.1739 15.2467L32.9199 16.6424C32.5739 17.0274 31.9814 17.0591 31.5963 16.7133V16.7133Z") fill="#387CFF" 
             h4 Home Owners
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la.
-        .col-sm-6.col-md-4.mb-3.mb-md-5
+        .col-sm-12.col-md-4.mb-3.mb-md-5
           .pe-lg-6
             span.svg-icon.text-primary.mb-3
               svg fill="none" height="24" viewbox=("0 0 35 31") width="24" xmlns="http://www.w3.org/2000/svg" 
