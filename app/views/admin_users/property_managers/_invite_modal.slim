@@ -8,7 +8,7 @@
         button.btn.btn-icon.btn-sm.btn-ghost-secondary aria-label="Close" data-dismiss="modal" type="button" 
           i.tio-clear.tio-lg
       .modal-body
-        = form_tag(invite_admin_users_property_managers_path, method: :post) do
+        = form_tag(invite_admin_users_property_managers_path, method: :post, id: "invite-property-manager") do
           .form-group
             label.col-form-label.input-label for="first_name"  First name
             = text_field_tag :first_name, '', class: "form-control", id: "first_name"

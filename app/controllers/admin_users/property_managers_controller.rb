@@ -13,16 +13,24 @@ module AdminUsers
     end
 
     def invite
-      if User.find_by(email: user_params[:email]).blank?
+      if check_invite_params(params)
+        flash[:alert] = 'Something went wrong please try again later!'
+      elsif User.find_by(email: user_params[:email]).blank?
         user = User.invite!(user_params)
         company = Company.where(name: params[:company_name]).first_or_create
         user.build_property_manager(company: company)
         user.save
+      else
+        flash[:alert] = 'Email already in use'
       end
       redirect_to admin_users_property_managers_path
     end
 
     private
+
+    def check_invite_params(params)
+      params[:company_name].blank? || params[:first_name].blank? || params[:last_name].blank? || params[:email].blank?
+    end
 
     def user_params
       params.permit(:first_name, :last_name, :email)

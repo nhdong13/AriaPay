@@ -19,6 +19,9 @@ import HSSideNav from "../plugins/hs-navbar-vertical-aside/hs-navbar-vertical-as
 window.HSCore = HSCore
 window.HSSideNav = HSSideNav
 
+import 'jquery-validation'
+import "../pages/admin/property_managers"
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
