@@ -22,5 +22,6 @@ Rails.application.routes.draw do
 
   namespace :property_managers do
     get '/dashboard', to: 'dashboard#index'
+    get '/estates', to: 'estates#index'
   end
 end

@@ -1,0 +1,30 @@
+#estates {
+  .card {
+    .logo {
+      position: absolute;
+      top: 8px;
+      width: 84px;
+      height: 42px;
+      object-fit: contain;
+    }
+    .float-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .location {
+      font-size: 11px;
+      i {
+        font-size: 1rem;
+      }
+    }
+    .card-link {
+      font-size: 12px;
+      font-weight: 700;
+      i {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

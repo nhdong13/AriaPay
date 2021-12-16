@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module PropertyManagers
-  class DashboardController < BaseController
+  class EstatesController < BaseController
     def index; end
   end
 end
