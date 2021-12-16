@@ -26,10 +26,10 @@ main#content.sign-in.flex-grow-1 role="main"
               = f.label 'Email Address', class: "form-label"
               = f.email_field :email, autocomplete: "email", class: "form-control form-control-lg", required: "required"
             .mb-4
-              = f.label 'New password', class: "form-label"
+              = f.label 'Password', class: "form-label"
               = f.password_field :password, autocomplete: "new-password", class: "form-control form-control-lg", required: "required"
             .mb-4
-              = f.label 'Confirm new password', class: "form-label"
+              = f.label 'Confirm password', class: "form-label"
               = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control form-control-lg", required: "required"
             .form-check.mb-4
               input#signupPrivacyCheck.form-check-input name="signupPrivacyCheck" required="" type="checkbox"
