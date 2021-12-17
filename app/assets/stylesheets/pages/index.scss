@@ -1,6 +1,5 @@
 #content {
   .gradient-x-overlay-image::before {
-    z-index: 2;
     background-image: linear-gradient(to right, rgba($color: $blue, $alpha: .78) 0, rgba($color: $blue, $alpha: .78) 100%);
   }
   

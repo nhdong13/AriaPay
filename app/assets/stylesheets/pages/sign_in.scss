@@ -1,0 +1,29 @@
+.sign-in {
+  .info {
+    max-width: 500px;
+  }
+
+  .list {
+    width: fit-content;
+    margin: 0 auto;
+  
+    i {
+      font-size: 1.6rem;
+    }
+  }
+
+  .swiper-wrapper .swiper-slide {
+    width: 20% !important;
+  }
+
+  label.error {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: .875em;
+    color: $red;
+  }
+
+  input.error {
+    border-color: $red;
+  }
+}

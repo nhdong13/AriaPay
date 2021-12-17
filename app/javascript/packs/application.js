@@ -14,7 +14,9 @@ window.Swiper = Swiper
 window.HSHeader = HSHeader
 window.HSMegaMenu = HSMegaMenu
 
+import 'jquery-validation'
 import "../pages/index"
+import "../pages/sign_in"
 
 Rails.start()
 Turbolinks.start()
