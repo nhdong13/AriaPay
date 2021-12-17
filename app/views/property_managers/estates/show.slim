@@ -1,0 +1,34 @@
+main#estate.main.pointer-event role="main" 
+  .content.container-fluid
+    .page-header.pb-4.mb-4
+      nav aria-label="breadcrumb" 
+        ol.breadcrumb.breadcrumb-no-gutter
+          li.breadcrumb-item
+            a.breadcrumb-link href="#{property_managers_estates_path}"  Estates
+          li.breadcrumb-item.active aria-current="page"  Vesta: Two-Three North
+      .row.align-items-center
+        .col-sm
+          h1.page-header-title Vesta: Two-Three North
+          p.location.font-weight-bolder.text-muted.mb-0.d-flex.align-items-center
+            i.custom-map-marker.mr-1
+            | 123 Dublin Road, Dublin 17, D04 AB12
+        .col-sm-auto
+          a.btn.btn-primary.px-4.mr-3 data-toggle="modal" href="javascript:;"
+            | New Category
+          a.btn.btn-outline-primary.px-4 data-toggle="modal" href="javascript:;"
+            | New Unit
+    ul.nav.nav-segment.mb-4
+      li.nav-item
+        a#nav-one-eg1-tab.nav-link.active aria-controls="nav-one-eg1" aria-selected="true" data-toggle="pill" href="#nav-one-eg1" role="tab"  Apartment Block
+      li.nav-item
+        a#nav-two-eg1-tab.nav-link aria-controls="nav-two-eg1" aria-selected="false" data-toggle="pill" href="#nav-two-eg1" role="tab"  Housing Estate
+      li.nav-item
+        a#nav-three-eg1-tab.nav-link aria-controls="nav-three-eg1" aria-selected="false" data-toggle="pill" href="#nav-three-eg1" role="tab"  Town Houses
+    = render "property_managers/estates/units_table"
+
+javascript:
+  var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+  $('.js-select2-custom').each(function () {
+    $.HSCore.components.HSSelect2.init($(this));
+  });
