@@ -1,0 +1,42 @@
+.card
+  .card-header
+    .row.justify-content-between.align-items-center.flex-grow-1
+      .col-sm-6.col-md-4.mb-3.mb-sm-0
+        h4
+          | Property Managers
+          span.badge.badge-soft-warning.ml-2 = PropertyManager.count
+      .col-sm-6
+        .d-sm-flex.justify-content-sm-end.align-items-sm-center
+          = form_tag(admin_users_property_managers_path, method: :get, class: 'd-flex') do
+            .d-flex.justify-content-start.align-items-center.mr-5
+              span.mr-2 style=('width: max-content;') Sort by:
+              = select_tag "order_by", options_for_select([ "Name", "Email", "Company" ], params[:order_by]), include_blank: "All", class: "js-select2-custom", id: "sort-by", "data-hs-select2-options": '{"minimumResultsForSearch": "Infinity","customClass": "custom-select custom-select-sm custom-select-borderless","dropdownAutoWidth": true,"width": true}'
+            .input-group.input-group-merge.input-group-flush
+              .input-group-prepend
+                .input-group-text
+                  i.tio-search
+              = text_field_tag :term, params[:term], class: "form-control search", placeholder: "Search"
+  .table-responsive.datatable-custom
+    table#datatable.table.table-lg.table-borderless.table-thead-bordered.table-nowrap.table-align-middle.card-table.text-dark
+      thead.thead-light
+        tr
+          th Name
+          th Email
+          th Company
+      tbody
+        - @property_managers.each_with_index do |property_manager, i|
+          tr
+            td = property_manager.user.full_name
+            td = property_manager.user.email
+            td = property_manager.company.name
+                  
+  .card-footer
+    .row.justify-content-center.justify-content-sm-between.align-items-sm-center
+      .col-sm.mb-2.mb-sm-0
+        .d-flex.justify-content-center.justify-content-sm-start.align-items-center.font-weight-bold
+          span.mr-2 style=("font-size: 12px")  Showing:
+          span style=("color: #1E2022") 
+            = @property_managers.size.to_s + " of " + PropertyManager.count.to_s
+      .col-sm-auto
+        .d-flex.justify-content-center.justify-content-sm-end
+          = paginate @property_managers, theme: 'twitter-bootstrap-4', pagination_class: 'my-auto'

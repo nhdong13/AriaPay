@@ -1,0 +1,16 @@
+main#content.main.pointer-event role="main" 
+  .content.container-fluid
+    .page-header.pb-4
+      .row.align-items-center
+        .col-sm
+          h1.page-header-title Property Managers
+        .col-sm-auto
+          a.btn.btn-primary data-toggle="modal" href="javascript:;" data-target="#inviteModal"
+            i.tio-user-add.mr-1
+            | Invite Property Manager
+    = render "admin_users/shared/flash_message"
+    = render "admin_users/property_managers/table"
+    = render "admin_users/property_managers/invite_modal"
+
+javascript:
+  propertyManagersInit.init()
