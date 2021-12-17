@@ -17,6 +17,8 @@ window.HSMegaMenu = HSMegaMenu
 import 'jquery-validation'
 import "../pages/index"
 import "../pages/sign_in"
+import "../pages/forgot_password"
+import "../pages/reset_password"
 
 Rails.start()
 Turbolinks.start()
