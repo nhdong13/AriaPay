@@ -1,0 +1,24 @@
+main#content.sign-in.flex-grow-1 role="main"
+  .container-fluid
+    .row
+      .col.d-none.d-lg-flex.justify-content-center.align-items-center.min-vh-lg-100.position-relative.gradient-x-overlay-image style=("background-image: url(#{image_path "house_1.png"});")
+        = render "shared/marketing_block"
+      .col.d-flex.justify-content-center.align-items-center.min-vh-lg-100
+        .flex-grow-1.mx-auto style=("max-width: 28rem;")
+          .text-center.mb-5.mb-md-7
+            h1.h2 Forgot Password?
+            p.text-muted Enter the email address you used when you joined and we'll send you instructions to reset your password.
+          = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, id: "user-forgot-password" }) do |f|
+            - if resource.errors.any?
+              - flash.now[:alert] = resource.errors.full_messages.join('. ')
+              = render "shared/flash_message"
+            .mb-4
+              = f.label 'Email Address', class: "form-label"
+              = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-lg"
+            .d-grid.mb-3
+              button.btn.btn-primary.btn-lg type="submit"  Submit
+            .text-center.mb-4
+              = link_to "< Back to Log In", new_user_session_path, class: "fw-bold"
+
+javascript:
+  forgotPasswordInit.init()
