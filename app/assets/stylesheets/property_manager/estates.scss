@@ -13,6 +13,8 @@
       right: 0;
     }
     .location {
+      display: flex;
+      align-items: center;
       font-size: 11px;
       i {
         font-size: 1rem;
