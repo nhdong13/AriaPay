@@ -1,0 +1,25 @@
+main#content.sign-in.flex-grow-1 role="main"
+  .container-fluid
+    .row
+      .col.d-none.d-lg-flex.justify-content-center.align-items-center.min-vh-lg-100.position-relative.gradient-x-overlay-image style=("background-image: url(#{image_path "house_1.png"});")
+        = render "shared/marketing_block"
+      .col.d-flex.justify-content-center.align-items-center.min-vh-lg-100
+        .flex-grow-1.mx-auto style=("max-width: 28rem;")
+          .text-center.mb-5.mb-md-7
+            h1.h2 Log into your account
+            p.text-muted Use the form below to log in to your account
+          = form_for(resource, as: resource_name, url: admin_user_session_path, html: { id: "user-sign-in", class: "js-validate needs-validation"}) do |f|
+            = render "shared/flash_message"
+            .mb-4
+              = f.label 'Email Address', class: "form-label"
+              = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-lg"
+            .mb-4
+              .d-flex.justify-content-between.align-items-center
+                = f.label :password, class: "form-label"
+              div data-hs-validation-validate-class="" 
+                = f.password_field :password, autocomplete: "current-password", class: "js-toggle-password form-control form-control-lg", data: {'hs-toggle-password-options': '{"target": "#changePassTarget", "defaultClass": "bi-eye-slash", "showClass": "bi-eye", "classChangeTarget": "#changePassIcon"}'}
+            .d-grid.mb-3
+              button.btn.btn-primary.btn-lg type="submit"  Log in
+
+javascript:
+  signInInit.init()

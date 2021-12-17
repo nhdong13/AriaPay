@@ -1,6 +1,6 @@
 import "../stylesheets/dashboard"
 import "bootstrap-icons/font/bootstrap-icons.css"
-import "bootstrap"
+import "../plugins/bootstrap-4.5.3/bootstrap.bundle.min.js"
 import "../plugins/chart.js/chart.js"
 import "../plugins/icon-set/style.css"
 import "../plugins/select2/select2.full.min.js"
@@ -18,6 +18,9 @@ import HSSideNav from "../plugins/hs-navbar-vertical-aside/hs-navbar-vertical-as
 
 window.HSCore = HSCore
 window.HSSideNav = HSSideNav
+
+import 'jquery-validation'
+import "../pages/admin/property_managers"
 
 Rails.start()
 Turbolinks.start()

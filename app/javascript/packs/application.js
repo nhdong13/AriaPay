@@ -19,6 +19,7 @@ import "../pages/index"
 import "../pages/sign_in"
 import "../pages/forgot_password"
 import "../pages/reset_password"
+import "../pages/complete_account"
 
 Rails.start()
 Turbolinks.start()

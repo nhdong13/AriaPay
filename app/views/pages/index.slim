@@ -6,6 +6,7 @@ main#content role="main"
         .container.d-md-flex.align-items-md-center.justify-content-center.text-center.content-space-3.content-space-t-md-4.content-space-t-lg-3 style=("height: 630px") 
           .w-lg-75.mx-lg-auto
             .mb-4
+              = render "shared/flash_message"
               h1.display-4.text-white.mb-3 Change is coming!
               p.lead.text-white.fs-4 AriaPay is revolutionising service charge management for the property market
             = form_for @register_interest, url: register_interest_path, remote: true do |f|

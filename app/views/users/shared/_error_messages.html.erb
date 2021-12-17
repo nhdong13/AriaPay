@@ -1,0 +1,8 @@
+<% if resource.errors.any? %>
+  <% resource.errors.full_messages.each do |message| %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <span><%= message %></span>
+      <button class="close btn-close" aria-label="Close" data-bs-dismiss="alert" type="button"></button>
+    </div>
+  <% end %>
+<% end %>

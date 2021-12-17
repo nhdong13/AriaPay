@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module PropertyManager
+module PropertyManagers
   class DashboardController < ApplicationController
     layout 'dashboard'
     before_action :authenticate_user!

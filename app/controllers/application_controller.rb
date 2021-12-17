@@ -3,8 +3,18 @@
 class ApplicationController < ActionController::Base
   layout :layout_by_resource
 
-  def after_sign_in_path_for(_resource)
-    property_manager_dashboard_path
+  def after_sign_in_path_for(resource)
+    if resource.instance_of?(AdminUser)
+      # first, sign out current_user, if signed in
+      sign_out current_user if current_user
+
+      admin_users_property_managers_path
+    elsif resource.instance_of?(User)
+      # first, sign out current_admin_user, if signed in
+      sign_out current_admin_user if current_admin_user
+
+      property_managers_dashboard_path
+    end
   end
 
   private
