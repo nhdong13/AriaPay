@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   
   devise_for :admin_users
   devise_for :users, controllers: {
-    invitations: "users/invitations"
+    invitations: "users/invitations",
+    registrations: "users/registrations"
   }
 
   root 'pages#index'

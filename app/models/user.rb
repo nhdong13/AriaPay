@@ -14,4 +14,8 @@ class User < ApplicationRecord
   def full_name
     [first_name.to_s, last_name.to_s].join(' ')
   end
+
+  def is_property_manager?
+    property_manager.present?
+  end
 end
