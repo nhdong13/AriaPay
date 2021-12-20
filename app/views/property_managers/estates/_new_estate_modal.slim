@@ -33,6 +33,17 @@
               .form-group
                 = f.label :longitude, class: "col-form-label input-label"
                 = f.text_field :longitude, class: "form-control"
+          .form-group
+            = f.label :logo, "Estate Logo  (Optional)",class: "col-form-label input-label pb-0"
+            small.d-block.mb-3 SVG or Transparent PNG only. 5MB max size.
+            .dropzone.dropzone-custom.custom-file-boxed data-controller="dropzone" data-dropzone-accepted-files="image/png,image/svg+xml" data-dropzone-max-file-size="5" data-dropzone-max-files="1"
+              .dz-message.custom-file-boxed-label
+                = image_tag("browse.svg", class: "avatar avatar-xl avatar-4by3 mb-3")
+                h5 Drag and drop your file here
+                p.mb-2 or
+                span.btn.btn-sm.btn-white Browse files
+            .div
+              = f.file_field :logo, direct_upload: true, multiple: false, class: 'd-none'
           .d-flex.justify-content-end
             button.btn.btn-white.mr-2 aria-label="Close" data-dismiss="modal" type="button"  Cancel
             button.btn.btn-primary type="submit"  Create Estate
