@@ -3,6 +3,10 @@ label.error {
   margin-top: 0.25rem;
   font-size: .875em;
   color: $red;
+
+  p, ul, li {
+    color: $red;
+  }
 }
 
 input.error {

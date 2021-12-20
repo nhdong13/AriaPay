@@ -16,7 +16,8 @@ window.editUserInit = {
         },
         'user[password]': {
           required: true,
-          minlength: 8
+          minlength: 8,
+          passwordConstraint: true
         },
         'user[password_confirmation]': {
           equalTo: "#user_password"
