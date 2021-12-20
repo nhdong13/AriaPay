@@ -21,6 +21,7 @@ window.HSSideNav = HSSideNav
 
 import 'jquery-validation'
 import "../pages/admin/property_managers"
+import "../pages/user/edit_user"
 
 Rails.start()
 Turbolinks.start()

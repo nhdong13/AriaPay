@@ -1,0 +1,54 @@
+.page-header.pb-4
+  .row.align-items-center
+    .col-sm
+      h1.page-header-title Settings
+.row 
+  .col-lg-8.mb-5.mb-lg-0.pr-0
+    .card.mb-5
+      .card-header
+        h2.h4.card-title.font-weight-bolder Basic Details
+      .card-body
+        .mb-4
+          p.mb-2.text-dark Name 
+          h4.card-title = current_user.full_name
+        - if current_user.is_property_manager?
+          .mb-4
+            p.mb-2.text-dark Company Name 
+            h4.card-title = current_user.company.name
+        .mb-3
+          p.mb-2.text-dark Email Address 
+          h4.card-title = current_user.email
+    .card.mb-5
+      .card-header
+        h2.h4.card-title.font-weight-bolder Change your password
+      .card-body
+        = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+          = render "users/shared/error_messages", resource: resource
+          .row.form-group
+            .col-sm-3
+              = f.label :current_password, "Current Password", class: "col-form-label input-label pr-1"
+            .col-sm-9
+              = f.password_field :current_password, autocomplete: "current-password", placeholder: "Enter current password",class: "form-control"
+          .row.form-group
+            .col-sm-3
+              = f.label :password, "New Password", class: "col-form-label input-label pr-1"
+            .col-sm-9
+              = f.password_field :password, autocomplete: "new-password", placeholder: "Enter new password",class: "form-control"
+          .row.form-group
+            .col-sm-3
+              = f.label :password_confirmation, "Confirm New Password", class: "col-form-label input-label pr-1"
+            .col-sm-9
+              = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm new password",class: "form-control"
+              .ml-2
+                h6.mt-3.mb-2 Password Requirements
+                p.mb-2 Ensure that the following requirements are met:
+                ul.mb-0
+                  li Minimum 8 characters long - the more, the better
+                  li At least one lowercase character
+                  li At least one uppercase character
+                  li At least one number, symbol, or whitespace character
+          .d-flex.justify-content-end
+            button.btn.btn-primary type="submit" Save Changes
+
+javascript:
+  editUserInit.init()
