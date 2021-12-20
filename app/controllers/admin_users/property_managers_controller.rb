@@ -47,14 +47,7 @@ module AdminUsers
     def sort_property_managers
       return unless params[:order_by].present?
 
-      @property_managers = case params[:order_by].downcase
-                           when 'name'
-                             @property_managers.order_by_name
-                           when 'email'
-                             @property_managers.order_by_email
-                           when 'company'
-                             @property_managers.order_by_company
-                           end
+      @property_managers = @property_managers.public_send("order_by_#{params[:order_by].try(:downcase)}")
     end
   end
 end

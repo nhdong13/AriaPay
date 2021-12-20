@@ -1,0 +1,194 @@
+.card
+  .card-header
+    .row.justify-content-between.align-items-center.flex-grow-1
+      .col-sm-6.col-md-4.mb-3.mb-sm-0
+        h4 Units
+      .col-sm-6
+        .d-sm-flex.justify-content-sm-end.align-items-sm-center
+          .d-flex.justify-content-start.align-items-center.mr-5
+            span.mr-2 Sort by:
+            select#datatableEntries.js-select2-custom data-hs-select2-options='{
+                      "minimumResultsForSearch": "Infinity",
+                      "customClass": "custom-select custom-select-sm custom-select-borderless",
+                      "dropdownAutoWidth": true,
+                      "width": true
+                    }' 
+              option selected="selected" value="all"  All
+          form
+            .input-group.input-group-merge.input-group-flush
+              .input-group-prepend
+                .input-group-text
+                  i.tio-search
+              input#datatableSearch.form-control aria-label="Search" placeholder="Search" type="search" /
+  .table-responsive.datatable-custom
+    table#datatable.table.table-lg.table-borderless.table-thead-bordered.table-nowrap.table-align-middle.card-table.text-dark
+      thead.thead-light
+        tr
+          th.sorting Unit Name
+          th.sorting Owner
+          th.sorting Tenant
+          th.sorting Amount Due
+          th.sorting Amount PAID
+          th.sorting Due Date
+          th Status
+          th
+      tbody
+        tr
+          td Apartment 001
+          td Brian Kenny
+          td Brian Kenny
+          td €840.00
+          td €800.00
+          td 17 November 2021
+          td
+            h3
+              span.badge.badge-soft-success.font-weight-bolder
+                | On Time
+          td.px-0
+            a.btn.btn-icon.btn-sm.btn-ghost-secondary.rounded-circle href="javascript:;" 
+                i.tio-more-horizontal
+        tr
+          td Apartment 002
+          td Andrew McDonagh
+          td Andrew McDonagh
+          td €1,300.00
+          td €1,100.00
+          td 17 November 2021
+          td
+            h3
+              span.badge.badge-soft-success.font-weight-bolder
+                | On Time
+          td.px-0 
+            a.btn.btn-icon.btn-sm.btn-ghost-secondary.rounded-circle href="javascript:;" 
+                i.tio-more-horizontal
+        tr
+          td Apartment 003
+          td Clark Wickstone
+          td Clark Wickstone
+          td €1700.00
+          td €1450.00
+          td 1 September 2021
+          td
+            h3
+              span.badge.badge-soft-danger.font-weight-bolder
+                | Overdue
+          td.px-0
+            a.btn.btn-icon.btn-sm.btn-ghost-secondary.rounded-circle href="javascript:;" 
+                i.tio-more-horizontal
+        tr
+          td Apartment 004
+          td Brian Kenny
+          td Brian Kenny
+          td €840.00
+          td €85.00
+          td 12 July 2022
+          td
+            h3
+              span.badge.badge-soft-success.font-weight-bolder
+                | On Time
+          td.px-0 
+            a.btn.btn-icon.btn-sm.btn-ghost-secondary.rounded-circle href="javascript:;" 
+                i.tio-more-horizontal
+        tr
+          td Apartment 005
+          td Andrew McDonagh
+          td Andrew McDonagh
+          td €1,300.00
+          td €0.00
+          td 11 August 2022
+          td
+            h3
+              span.badge.badge-soft-success.font-weight-bolder
+                | On Time
+          td.px-0 
+            a.btn.btn-icon.btn-sm.btn-ghost-secondary.rounded-circle href="javascript:;" 
+                i.tio-more-horizontal
+        tr
+          td Apartment 006
+          td Clark Wickstone
+          td Clark Wickstone
+          td €1,700.00
+          td €1,640.00
+          td 17 June 2021
+          td
+            h3
+              span.badge.badge-soft-danger.font-weight-bolder
+                | Overdue
+          td.px-0 
+            a.btn.btn-icon.btn-sm.btn-ghost-secondary.rounded-circle href="javascript:;" 
+                i.tio-more-horizontal
+        tr
+          td Apartment 007
+          td Clark Wickstone
+          td Clark Wickstone
+          td €1,700.00
+          td €150.00
+          td 11 August 2022
+          td
+            h3
+              span.badge.badge-soft-success.font-weight-bolder
+                | On Time
+          td.px-0 
+            a.btn.btn-icon.btn-sm.btn-ghost-secondary.rounded-circle href="javascript:;" 
+                i.tio-more-horizontal
+        tr
+          td Apartment 008
+          td Brian Kenny
+          td Brian Kenny
+          td €840.00
+          td €25.00
+          td 11 August 2022
+          td
+            h3
+              span.badge.badge-soft-success.font-weight-bolder
+                | On Time
+          td.px-0 
+            a.btn.btn-icon.btn-sm.btn-ghost-secondary.rounded-circle href="javascript:;" 
+                i.tio-more-horizontal
+        tr
+          td Apartment 009
+          td Andrew McDonagh
+          td Andrew McDonagh
+          td €1,300.00
+          td €800.00
+          td 11 October 2021
+          td
+            h3
+              span.badge.badge-soft-danger.font-weight-bolder
+                | Overdue
+          td.px-0 
+            a.btn.btn-icon.btn-sm.btn-ghost-secondary.rounded-circle href="javascript:;" 
+                i.tio-more-horizontal
+        tr
+          td Apartment 010
+          td Clark Wickstone
+          td Clark Wickstone
+          td €1,700.00
+          td €1,380.00
+          td 11 October 2021
+          td
+            h3
+              span.badge.badge-soft-danger.font-weight-bolder
+                | Overdue
+          td.px-0 
+            a.btn.btn-icon.btn-sm.btn-ghost-secondary.rounded-circle href="javascript:;" 
+                i.tio-more-horizontal
+                  
+  .card-footer
+    .row.justify-content-center.justify-content-sm-between.align-items-sm-center
+      .col-sm.mb-2.mb-sm-0
+        .d-flex.justify-content-center.justify-content-sm-start.align-items-center.font-weight-bold
+          span.mr-2 style=("font-size: 12px")  Showing:
+          span style=("color: #1E2022")  10 of 10
+      .col-sm-auto
+        .d-flex.justify-content-center.justify-content-sm-end
+          #datatable_paginate.dataTables_paginate.paging_simple_numbers
+            ul#datatable_pagination.pagination.datatable-custom-pagination
+              li.paginate_item.page-item.disabled
+                a#datatable_previous.paginate_button.previous.page-link aria-controls="datatable" data-dt-idx="0" tabindex="0" 
+                  span aria-hidden="true"  Prev
+              li.paginate_item.page-item.active
+                a.paginate_button.page-link aria-controls="datatable" data-dt-idx="1" tabindex="0"  1
+              li.paginate_item.page-item
+                a#datatable_next.paginate_button.next.page-link aria-controls="datatable" data-dt-idx="3" tabindex="0" 
+                  span aria-hidden="true"  Next

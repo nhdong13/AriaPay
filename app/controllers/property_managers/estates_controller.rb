@@ -6,6 +6,8 @@ module PropertyManagers
       @estate = Estate.new
     end
 
+    def show; end
+
     def create; end
   end
 end
