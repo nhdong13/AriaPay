@@ -10,7 +10,6 @@ export default class extends Controller {
 
   connect() {
     this._inputTarget = this.element.nextElementSibling.querySelector('input')
-    console.log(this.element)
     this.inputRequired = this._inputTarget.getAttribute('required')
     this.dropZone = createDropZone(this)
     this.bindEvents()
