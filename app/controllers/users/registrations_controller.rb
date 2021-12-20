@@ -2,10 +2,10 @@
 
 module Users
   class RegistrationsController < Devise::RegistrationsController
-    layout 'dashboard', only: %i(edit update)
+    layout 'dashboard', only: %i[edit update]
 
     def after_update_path_for(_resource)
       edit_user_registration_path
-    end  
+    end
   end
 end
