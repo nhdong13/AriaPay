@@ -20,12 +20,13 @@ window.HSCore = HSCore
 window.HSSideNav = HSSideNav
 
 import 'jquery-validation'
+import "controllers"
 import './global'
 import "../pages/admin/property_managers"
 import "../pages/user/edit_user"
+import "../pages/user/estates"
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-import "controllers"

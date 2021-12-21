@@ -9,6 +9,7 @@ html
     link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'dashboard', 'data-turbolinks-track': 'reload'
+    script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_PLACES_API']}&libraries=places&callback=initAutocomplete"
   body.footer-offset.footer-offset.has-navbar-vertical-aside.navbar-vertical-aside-show-xl
     = render 'shared/dashboard_header'
     = render 'shared/sidebar'
