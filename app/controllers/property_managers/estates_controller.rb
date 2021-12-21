@@ -7,7 +7,7 @@ module PropertyManagers
       @estates = current_user.company.estates
     end
 
-    def show 
+    def show
       @estate = Estate.find(params[:id])
     end
 
