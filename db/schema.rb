@@ -69,10 +69,10 @@ ActiveRecord::Schema.define(version: 2021_12_20_040834) do
     t.string "country"
     t.string "latitude"
     t.string "longitude"
-    t.bigint "property_manager_id", null: false
+    t.bigint "company_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["property_manager_id"], name: "index_estates_on_property_manager_id"
+    t.index ["company_id"], name: "index_estates_on_company_id"
   end
 
   create_table "property_managers", force: :cascade do |t|
@@ -119,7 +119,7 @@ ActiveRecord::Schema.define(version: 2021_12_20_040834) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "estates", "property_managers"
+  add_foreign_key "estates", "companies"
   add_foreign_key "property_managers", "companies"
   add_foreign_key "property_managers", "users"
 end

@@ -4,13 +4,15 @@ module PropertyManagers
   class EstatesController < BaseController
     def index
       @estate = Estate.new
-      @estates = current_user.property_manager.estates
+      @estates = current_user.company.estates
     end
 
-    def show; end
+    def show 
+      @estate = Estate.find(params[:id])
+    end
 
     def create
-      estate = current_user.property_manager.estates.create(estate_params)
+      estate = current_user.company.estates.create(estate_params)
 
       if estate.persisted?
         flash[:success] = 'Estate created successfully!'

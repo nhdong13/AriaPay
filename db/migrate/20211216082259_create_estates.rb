@@ -8,7 +8,7 @@ class CreateEstates < ActiveRecord::Migration[6.1]
       t.string :country
       t.string :latitude
       t.string :longitude
-      t.references :property_manager, null: false, foreign_key: true
+      t.references :company, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -19,8 +19,8 @@
             = estate.name
           p.location.font-weight-bolder.text-muted.mb-5.d-flex.align-items-center
             i.custom-map-marker.mr-1
-            = estate.address
-          a.card-link.float-right href="#{property_managers_estate_path(1)}"
+            = estate.location
+          a.card-link.float-right href="#{property_managers_estate_path(estate)}"
             | View Estates
             i.tio-lg.tio-arrow-forward.ml-1
 = render "property_managers/estates/new_estate_modal"
