@@ -4,6 +4,7 @@ class Category < ApplicationRecord
   belongs_to :company
 
   validates :name, presence: true
+  validates :category_type, presence: true
 
   def house?
     category_type.zero?
