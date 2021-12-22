@@ -15,7 +15,10 @@
             = f.text_field :name, class: "form-control"
           .form-group.mb-0
             = f.label :name, "Category Type", class: "col-form-label input-label"
-            = f.select :category_type, CATEGORY_TYPE, {}, { class: "js-select2-custom", "data-hs-select2-options": '{"minimumResultsForSearch": "Infinity"}' }
+            select.js-select2-custom.custom-select name="category[category_type]" data-hs-select2-options='{"minimumResultsForSearch": "Infinity", "placeholder": "Select Category"}'
+              option label="empty" 
+              option value="0"  House
+              option value="1"  Apartment Block
         .modal-footer
           .d-flex.justify-content-end
             button.btn.btn-white.mr-2 aria-label="Close" data-dismiss="modal" type="button"  Cancel
