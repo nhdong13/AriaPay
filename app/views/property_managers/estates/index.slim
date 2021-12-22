@@ -25,9 +25,6 @@
             i.tio-lg.tio-arrow-forward.ml-1
 = render "property_managers/estates/new_estate_modal"
 
-script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_PLACES_API']}&libraries=places&callback=initAutocomplete"
-javascript:  
-  window.addEventListener('load', function() {
-    estatesInit.init()
-    initAutocomplete()
-  });
+= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_PLACES_API']}&libraries=places&callback=initAutocomplete", async: true, defer: true
+javascript:
+  estatesInit.init()

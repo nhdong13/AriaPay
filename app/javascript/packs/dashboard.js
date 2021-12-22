@@ -22,6 +22,7 @@ window.HSSideNav = HSSideNav
 import 'jquery-validation'
 import "controllers"
 import './global'
+import '../pages/initAutocomple'
 import "../pages/admin/property_managers"
 import "../pages/user/edit_user"
 import "../pages/user/estates"
