@@ -26,6 +26,7 @@ import '../pages/initAutocomple'
 import "../pages/admin/property_managers"
 import "../pages/user/edit_user"
 import "../pages/user/estates"
+import "../pages/user/estate"
 
 Rails.start()
 Turbolinks.start()
