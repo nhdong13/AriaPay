@@ -15,6 +15,7 @@ window.HSHeader = HSHeader
 window.HSMegaMenu = HSMegaMenu
 
 import 'jquery-validation'
+import './global'
 import "../pages/index"
 import "../pages/sign_in"
 import "../pages/forgot_password"

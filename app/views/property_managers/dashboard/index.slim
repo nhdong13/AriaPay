@@ -1,11 +1,9 @@
-main#content.main.pointer-event role="main" 
-  .content.container-fluid
-    .page-header.pb-4
-      .row.align-items-center
-        .col-sm
-          h1.page-header-title Dashboard
-    = render "property_managers/dashboard/stats"
-    = render "property_managers/dashboard/table"
+.page-header.pb-4
+  .row.align-items-center
+    .col-sm
+      h1.page-header-title Dashboard
+= render "property_managers/dashboard/stats"
+= render "property_managers/dashboard/table"
 
 javascript:
   var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
