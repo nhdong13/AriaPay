@@ -8,8 +8,8 @@ window.initAutocomplete = () => {
 
   if (address1Field) {
     autocomplete = new google.maps.places.Autocomplete(address1Field, {
-      fields: ["address_components", "geometry"],
-      types: ["address"],
+      componentRestrictions: { country: ["ie"] },
+      fields: ["address_components", "geometry"]
     });
     address1Field.focus();
     autocomplete.addListener("place_changed", fillInAddress);
