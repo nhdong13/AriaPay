@@ -1,0 +1,25 @@
+#newCategoryModal.modal.fade aria-hidden="true" role="dialog" tabindex="-1" 
+  .modal-dialog.modal-dialog-centered role="document" 
+    .modal-content
+      = form_for(@category, url: property_managers_categories_path, id: "new-estate") do |f|
+        .modal-header.d-flex.align-items-start
+          div
+            h4.modal-title New Category
+            p Use the form below to create a new category
+          button.btn.btn-icon.btn-sm.btn-ghost-secondary aria-label="Close" data-dismiss="modal" type="button" 
+            i.tio-clear.tio-lg
+        .modal-body
+          = hidden_field_tag :estate_id, estate.id, class: "form-control"
+          .form-group
+            = f.label :name, "Category Name", class: "col-form-label input-label"
+            = f.text_field :name, class: "form-control"
+          .form-group.mb-0
+            = f.label :name, "Category Type", class: "col-form-label input-label"
+            select.js-select2-custom.custom-select name="category[category_type]" data-hs-select2-options='{"minimumResultsForSearch": "Infinity", "placeholder": "Select Category"}'
+              option label="empty" 
+              option value="0"  House
+              option value="1"  Apartment Block
+        .modal-footer
+          .d-flex.justify-content-end
+            button.btn.btn-white.mr-2 aria-label="Close" data-dismiss="modal" type="button"  Cancel
+            button.btn.btn-primary type="submit"  Create Category

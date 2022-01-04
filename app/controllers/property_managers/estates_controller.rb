@@ -9,6 +9,7 @@ module PropertyManagers
 
     def show
       @estate = Estate.find(params[:id])
+      @category = Category.new
     end
 
     def create
