@@ -4,7 +4,8 @@ module ApplicationHelper
   FLASH_CLASSES = {
     'notice' => 'alert-info',
     'success' => 'alert-success',
-    'alert' => 'alert-danger'
+    'alert' => 'alert-danger',
+    'error' => 'alert-danger'
   }.freeze
 
   def flash_class(level)

@@ -3,13 +3,13 @@
     ol.breadcrumb.breadcrumb-no-gutter
       li.breadcrumb-item
         a.breadcrumb-link href="#{property_managers_estates_path}"  Estates
-      li.breadcrumb-item.active aria-current="page"  Vesta: Two-Three North
+      li.breadcrumb-item.active aria-current="page" = @estate.name
   .row.align-items-center
     .col-sm
-      h1.page-header-title Vesta: Two-Three North
+      h1.page-header-title = @estate.name
       p.location.font-weight-bolder.text-muted.mb-0.d-flex.align-items-center
         i.custom-map-marker.mr-1
-        | 123 Dublin Road, Dublin 17, D04 AB12
+        = @estate.location
     .col-sm-auto
       a.btn.btn-primary.px-4.mr-3 data-toggle="modal" href="javascript:;"
         | New Category
